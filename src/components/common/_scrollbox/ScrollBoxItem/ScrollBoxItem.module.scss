@@ -1,0 +1,16 @@
+.ScrollBoxItem {
+  display: flex;
+  height: 60px;
+  @include font(16px, 500, $subTextColor);
+
+  & > * {
+    @include flex;
+    width: 20%;
+    flex: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fbfbfb;
+  }
+}

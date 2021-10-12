@@ -1,0 +1,40 @@
+@mixin flex($alignItems: center, $justifyContent: center, $flexDirection: row) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  flex-direction: $flexDirection;
+}
+
+@mixin square($width: 0px, $height: 0px, $borderRadius: 0px) {
+  width: $width;
+  @if $height > 0 {
+    height: $height;
+  } @else {
+    height: $width;
+  }
+  border-radius: $borderRadius;
+}
+
+@mixin font($size: 16px, $weight: normal, $color: $tuna) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin modalBackground() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@mixin textEllipsis($max-width: 100%) {
+  @if $max-width != 0 {
+    max-width: $max-width;
+  }
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

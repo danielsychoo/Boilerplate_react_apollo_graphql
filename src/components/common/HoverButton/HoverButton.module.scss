@@ -1,0 +1,7 @@
+.HoverButton {
+  @include flex;
+
+  .icon {
+    margin-right: 4px;
+  }
+}

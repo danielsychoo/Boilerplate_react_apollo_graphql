@@ -1,0 +1,4 @@
+.LinkName {
+  @include font(16px, normal, $mainTextColor);
+  text-decoration: none;
+}
